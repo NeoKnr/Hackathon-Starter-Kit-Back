@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship
 
 from shared import db
 
-class Promotion(db.Model):
+class PromotionModel(db.Model):
     __tablename__ = "promotion"
     id_promotion = Column(Integer, primary_key = True, unique = True, nullable = False, autoincrement=True)
     intitule = Column(String(200), nullable = False)
@@ -12,4 +12,3 @@ class Promotion(db.Model):
     fin_promotion = Column(DateTime, nullable = False)
     id_entreprise = Column(Integer, ForeignKey('entreprise.id_entreprise'))
     entreprise = relationship("Entreprise", back_populates="promotions")
-    promotion = relationship("Promotion", back_populates="entreprise")

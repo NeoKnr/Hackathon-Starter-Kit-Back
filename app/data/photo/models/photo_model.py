@@ -9,5 +9,5 @@ class Photo(db.Model):
     nom_photo = Column(String(100), nullable = False)
     date = Column(DateTime, nullable = False)
     type_photo = Column(String(50), nullable = False)
-    id_dossier = Column(Integer, ForeignKey('dossier.idDossier'))
+    id_dossier = Column(Integer, ForeignKey('dossier.id_dossier'))
     dossier = relationship("Dossier", back_populates="photo")

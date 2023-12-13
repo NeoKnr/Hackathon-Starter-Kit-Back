@@ -3,8 +3,8 @@
 from flask import Blueprint, request
 from marshmallow import ValidationError
 
-from data.hello_world.models import HelloWorldModel
-from data.hello_world.schemas import HelloWorldSchema
+from data.etudiant.models import Etudiant
+from data.etudiant.schemas import EtudiantSchema
 from shared import db
 
 NAME = 'hello_world'
