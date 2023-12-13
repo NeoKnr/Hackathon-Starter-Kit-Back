@@ -5,9 +5,9 @@ from shared import db
 
 class Etudiant(db.Model):
     __tablename__ = "etudiant"
-    idEtudiant = Column(Integer, primary_key = True, unique = True, nullable = False, autoincrement=True)
+    id_etudiant = Column(Integer, primary_key = True, unique = True, nullable = False, autoincrement=True)
     nom = Column(String(100), nullable = False)
     nom = Column(String(100), nullable = False)
     email = Column(String(200), nullable = False, unique = True)
-    motDePasse = Column(String(32), nullable = False)
+    mot_de_passe = Column(String(32), nullable = False)
     classe = Column(String(50), nullable = False)

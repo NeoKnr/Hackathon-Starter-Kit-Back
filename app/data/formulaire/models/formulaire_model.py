@@ -4,7 +4,7 @@ from shared import db
 
 class Formulaire(db.Model):
     __tablename__ = "formulaire"
-    idFormulaire = Column(Integer, primary_key = True, unique = True, nullable = False, autoincrement=True)
+    id_formulaire = Column(Integer, primary_key = True, unique = True, nullable = False, autoincrement=True)
     nom = Column(String(100), nullable = False)
     prenom = Column(String(100), nullable = False)
     email = Column(String(200), nullable = False)
