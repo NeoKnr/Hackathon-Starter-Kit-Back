@@ -1,0 +1,1 @@
+from .etudiant_controller import etudiant_blueprint

@@ -1,0 +1,1 @@
+from .promotion_model import PromotionModel

@@ -2,7 +2,7 @@ from sqlalchemy import Column, String, Integer
 
 from shared import db
 
-class Entreprise(db.Model):
+class EntrepriseModel(db.Model):
     __tablename__ = "entreprise"
     id_entreprise = Column(Integer, primary_key = True, unique = True, nullable = False)
     nom_entreprise = Column(String(200), unique = True, nullable = False)
@@ -13,4 +13,3 @@ class Entreprise(db.Model):
     ville = Column(String(50), nullable = False)
     telephone = Column(String(20), unique = True, nullable = False)
     categorie_entreprise = Column(String(100), nullable = False)
-    promotion = relationship("Promotion", back_populates="entreprise")

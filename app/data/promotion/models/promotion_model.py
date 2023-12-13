@@ -1,5 +1,4 @@
 from sqlalchemy import Column, String, Integer, DateTime, ForeignKey
-from sqlalchemy.orm import relationship
 
 from shared import db
 
@@ -10,5 +9,4 @@ class PromotionModel(db.Model):
     description = Column(String(1000), nullable = False)
     debut_promotion = Column(DateTime, nullable = False)
     fin_promotion = Column(DateTime, nullable = False)
-    id_entreprise = Column(Integer, ForeignKey('entreprise.id_entreprise'))
-    entreprise = relationship("Entreprise", back_populates="promotions")
+

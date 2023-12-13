@@ -1,0 +1,1 @@
+from .dossier_controller import dossier_blueprint

@@ -3,7 +3,7 @@
 from flask import Blueprint, request
 from marshmallow import ValidationError
 
-from data.promotion.models import Promotion
+from data.promotion.models import PromotionModel
 from data.promotion.schemas import PromotionSchema
 from shared import db
 

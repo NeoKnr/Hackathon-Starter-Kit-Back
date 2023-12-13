@@ -28,8 +28,29 @@ def create_app(config):
 
     url_prefix = "/api"
 
-    from data.hello_world.controllers import hello_world_blueprint
-    app.register_blueprint(hello_world_blueprint, url_prefix=url_prefix)
+    from data.admin.controllers import admin_blueprint
+    app.register_blueprint(admin_blueprint, url_prefix='/admin')
+    
+    from data.dossier.controllers import dossier_blueprint
+    app.register_blueprint(dossier_blueprint, url_prefix='/dossier')
+    
+    from data.entreprise.controllers import entreprise_blueprint
+    app.register_blueprint(entreprise_blueprint, url_prefix='/entreprise')
+    
+    from data.etudiant.controllers import etudiant_blueprint
+    app.register_blueprint(etudiant_blueprint, url_prefix='/etudiant')
+    
+    from data.event.controllers import event_blueprint
+    app.register_blueprint(event_blueprint, url_prefix='/event')
+    
+    from data.formulaire.controllers import formulaire_blueprint
+    app.register_blueprint(formulaire_blueprint, url_prefix='/formulaire')
+    
+    from data.photo.controllers import photo_blueprint
+    app.register_blueprint(photo_blueprint, url_prefix='/photo')
+    
+    from data.promotion.controllers import promotion_blueprint
+    app.register_blueprint(promotion_blueprint, url_prefix='/promotion')
 
     @app.errorhandler(ValidationError)
     def handle_custom_error(error):

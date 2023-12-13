@@ -1,10 +1,10 @@
 """Schema for serializing/deserializing a HelloWorldModel"""
 
-from data.event.models.event_model import Event
+from data.event.models.event_model import EventModel
 from shared.utils.schema.base_schema import BaseSchema
 
 
 class EventSchema(BaseSchema):
     class Meta:
-        model = Event
+        model = EventModel
         load_instance = True

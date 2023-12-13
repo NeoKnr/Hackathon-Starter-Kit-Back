@@ -2,7 +2,7 @@ from sqlalchemy import Column, String, Integer
 
 from shared import db
 
-class Formulaire(db.Model):
+class FormulaireModel(db.Model):
     __tablename__ = "formulaire"
     id_formulaire = Column(Integer, primary_key = True, unique = True, nullable = False, autoincrement=True)
     nom = Column(String(100), nullable = False)

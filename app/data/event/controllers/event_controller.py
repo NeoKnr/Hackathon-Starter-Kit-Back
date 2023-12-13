@@ -3,7 +3,7 @@
 from flask import Blueprint, request
 from marshmallow import ValidationError
 
-from data.event.models import Event
+from data.event.models import EventModel
 from data.event.schemas import EventSchema
 from shared import db
 

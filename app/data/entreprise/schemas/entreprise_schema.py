@@ -1,10 +1,10 @@
-"""Schema for serializing/deserializing a HelloWorldModel"""
+"""Schema for serializing/deserializing a EntrepriseModel"""
 
-from data.enteprise.models.entreprise_model import Entreprise
+from data.entreprise.models.entreprise_model import EntrepriseModel
 from shared.utils.schema.base_schema import BaseSchema
 
 
 class EntrepriseSchema(BaseSchema):
     class Meta:
-        model = Entreprise
+        model = EntrepriseModel
         load_instance = True

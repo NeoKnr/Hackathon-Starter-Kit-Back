@@ -2,7 +2,7 @@ from sqlalchemy import Column, String, Integer, DateTime
 
 from shared import db
 
-class Event(db.Model):
+class EventModel(db.Model):
     __tablename__ = "event"
     id_event = Column(Integer, primary_key = True, unique = True, nullable = False, autoincrement=True)
     nom_event = Column(String(100), nullable = False)
@@ -13,3 +13,4 @@ class Event(db.Model):
     ville = Column(String(50), nullable = False)
     photo = Column(String(200), nullable = False)
     description = Column(String(500), nullable = False)
+

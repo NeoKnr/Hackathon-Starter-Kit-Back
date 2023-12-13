@@ -1,0 +1,1 @@
+from .promotion_controller import promotion_blueprint

@@ -3,7 +3,7 @@
 from flask import Blueprint, request
 from marshmallow import ValidationError
 
-from data.formulaire.models import Formulaire
+from data.formulaire.models import FormulaireModel
 from data.formulaire.schemas import FormulaireSchema
 from shared import db
 

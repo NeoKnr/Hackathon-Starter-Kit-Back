@@ -3,7 +3,8 @@
 from flask import Blueprint, request
 from marshmallow import ValidationError
 
-from data.admin.models import Admin
+
+from data.admin.models import AdminModel
 from data.admin.schemas import AdminSchema
 from shared import db
 
@@ -15,7 +16,7 @@ admin_blueprint = Blueprint(f"{NAME}_admin_blueprint", __name__)
 @admin_blueprint.get(f"/get_admin/<int:id>")
 def get_admin(id: str):
     """GET route code goes here"""
-    entity: Admin = db.session.query(Admin).get(id)
+    entity: AdminModel = db.session.query().get(id)
     if entity is None:
         return "Goodby, World.", 404
     return entity.message, 200
@@ -26,9 +27,9 @@ def post_admin():
     """POST route code goes here"""
     payload = request.get_json()
     try:
-        entity: Admin = AdminSchema().load(payload)
+        entity: AdminModel = AdminSchema().load(payload)
     except ValidationError as error:
-        return f"The payload does't correspond to a valid Admin: {error}", 400
+        return f"The payload does't correspond to a valid AdminModel: {error}", 400
     db.session.add(entity)
     db.session.commit()
     return AdminSchema().dump(entity), 200

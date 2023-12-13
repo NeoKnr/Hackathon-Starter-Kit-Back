@@ -1,9 +1,9 @@
-""" Routes for the endpoint 'hello_world'"""
+""" Routes for the endpoint 'photo'"""
 
 from flask import Blueprint, request
 from marshmallow import ValidationError
 
-from data.photo.models import Photo
+from data.photo.models import PhotoModel
 from data.photo.schemas import PhotoSchema
 from shared import db
 
@@ -41,12 +41,12 @@ def delete_photo(id: str):
 
 
 @photo_blueprint.put(f"/update_photo/<int:id>")
-def put_hello_world(id: str):
+def put_photo(id: str):
     """PUT route code goes here"""
     return "Unimplemented", 501
 
 
 @photo_blueprint.patch(f"/modify_photo/<int:id>")
-def patch_hello_world(id: str):
+def patch_photo(id: str):
     """PATCH route code goes here"""
     return "Unimplemented", 501

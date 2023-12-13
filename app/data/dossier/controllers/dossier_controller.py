@@ -3,7 +3,7 @@
 from flask import Blueprint, request
 from marshmallow import ValidationError
 
-from data.dossier.models import Dossier
+from data.dossier.models import DossierModel
 from data.dossier.schemas import DossierSchema
 from shared import db
 

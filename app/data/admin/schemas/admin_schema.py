@@ -1,10 +1,10 @@
 """Schema for serializing/deserializing a HelloWorldModel"""
 
-from data.admin.models.admin_model import Admin
+from data.admin.models.admin_model import AdminModel
 from shared.utils.schema.base_schema import BaseSchema
 
 
 class AdminSchema(BaseSchema):
     class Meta:
-        model = Admin
+        model = AdminModel
         load_instance = True
